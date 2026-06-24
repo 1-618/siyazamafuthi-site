@@ -21,3 +21,43 @@
   --font-body: var(--font-body-face), system-ui, sans-serif;
   --font-mono: var(--font-spacemono), ui-monospace, monospace;
 }
+:root {
+  --bg: #ffffff;
+  --tint: #f6f9fc;
+  --ink: #0a2540;
+  --mut: #425466;
+  --line: #e6ebf1;
+  --accent: #b3401f;
+  --amber: #d6831a;
+  --green: #3e7d34;
+  --red: #bc3a22;
+  /* mesh / energy spectrum */
+  /* mesh — isishunka Zulu beadwork spectrum: sun, fire, earth, grass, sky */
+  --m1: #f2a922; /* phuzi — yellow/ochre: the sun, wealth */
+  --m2: #e8521e; /* terracotta/fire */
+  --m3: #c41e3a; /* bomvu — red: energy, strong love */
+  --m4: #2b6e4f; /* luhlaza — green: new grass, contentment */
+  --m5: #1f4e8c; /* juba — blue/indigo: sky */
+  /* instrument panel */
+  --panel: #0a1628;
+  --panel-line: rgba(255, 255, 255, 0.1);
+  --panel-txt: #e8edf4;
+  --panel-mut: rgba(232, 237, 244, 0.55);
+  --glow-green: #54d682;
+  --glow-amber: #ffb648;
+  --glow-red: #ff5a6e;
+  /* Layered shadows — multiple stacked layers, cool-navy tint, no pure black.
+     Exponential blur/opacity ramp mimics real light falloff (Stripe/Vercel-grade). */
+  --shadow-sm:
+    0 1px 1px rgba(10, 37, 64, 0.04), 0 2px 4px rgba(10, 37, 64, 0.05),
+    0 4px 8px rgba(10, 37, 64, 0.05);
+  --shadow-md:
+    0 1px 2px rgba(10, 37, 64, 0.04), 0 2px 4px rgba(10, 37, 64, 0.04),
+    0 5px 10px rgba(10, 37, 64, 0.05), 0 10px 20px rgba(10, 37, 64, 0.06),
+    0 18px 36px rgba(10, 37, 64, 0.07);
+  --shadow-lg:
+    0 1px 2px rgba(10, 37, 64, 0.04), 0 3px 6px rgba(10, 37, 64, 0.05),
+    0 8px 16px rgba(10, 37, 64, 0.06), 0 16px 32px rgba(10, 37, 64, 0.07),
+    0 30px 60px rgba(10, 37, 64, 0.09), 0 50px 90px rgba(10, 37, 64, 0.1);
+  --max: 1080px;
+}
