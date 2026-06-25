@@ -58,3 +58,50 @@ export const metadata: Metadata = {
       "Energy management platforms, HES/MDMS integration, and data engineering for municipalities and enterprises.",
   },
 };
+
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Siyazama Futhi",
+  legalName: "Siyazama Futhi (Pty) Ltd",
+  url: SITE_URL,
+  logo: `${SITE_URL}/apple-icon.png`,
+  image: `${SITE_URL}/opengraph-image`,
+  description:
+    "Energy monitoring software solutions for public and private sector clients in South Africa.",
+  // foundingDate: "20XX",  //
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Durban",
+    addressRegion: "KwaZulu-Natal",
+    addressCountry: "ZA",
+  },
+  areaServed: { "@type": "Country", name: "South Africa" },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    email: "info@siyazamafuthi.co.za",
+    telephone: "+27000000000",
+    areaServed: "ZA",
+    availableLanguage: ["en", "zu"],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en-ZA">
+      <body className={`${display.variable} ${body.variable} ${mono.variable}`}>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script src="/motion.js" />
+        <script src="/gradient.js" defer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        {children}
+      </body>
+    </html>
+  );
+}
